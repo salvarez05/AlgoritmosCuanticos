@@ -1,5 +1,3 @@
-package org.example;
-
 import org.redfx.strange.*;
 import org.redfx.strange.gate.*;
 import org.redfx.strange.local.SimpleQuantumExecutionEnvironment;
