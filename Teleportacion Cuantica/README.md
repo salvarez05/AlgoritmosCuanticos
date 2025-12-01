@@ -1,0 +1,9 @@
+# AlgoritmosCuanticos
+# Algoritmo de Teleportación Cuantica
+
+Debido a las caracteristicas de la fisica cuantica, específicamente el teorema de no-clonación, es imposible "copiar y pegar" el estado de un qubit. Para resolver este problema, se desarrolló el algoritmo de teleportación cuántica, un protocolo que permite transferir el estado cuántico completo de un qubit a otro qubit distante sin mover físicamente la partícula original.
+Este algoritmo se basa en tres pilares fundamentales: el entrelazamiento cuántico, que genera una correlación inseparable entre dos qubits incluso a grandes distancias; las operaciones locales, aplicadas sobre el qubit cuyo estado se desea transferir y sobre uno de los qubits entrelazados para preparar la información necesaria; y la comunicación clásica, mediante la cual se transmiten los resultados de las mediciones al nodo receptor para que este pueda aplicar las correcciones finales que reconstruyen el estado original sin violar el teorema de no-clonación.
+
+# Circuito General
+
+El circuito requiere tres qubits: uno con el estado que se desea enviar y dos qubits previamente entrelazados, uno en el emisor y otro en el receptor. Primero se genera el par entrelazado aplicando Hadamard y CNOT, y luego el emisor acopla su qubit al qubit de su parte del par mediante una puerta CNOT seguida de una Hadamard. Después mide ambos qubits y envía los dos bits clásicos de esos resultados al receptor. Con esa información, el receptor aplica una corrección X, Z, o ambas, sobre su qubit entrelazado, recuperando así exactamente el estado original. De este modo, el estado desaparece del emisor y reaparece en el receptor sin violar el teorema de no-clonación.

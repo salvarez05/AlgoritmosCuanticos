@@ -1,0 +1,8 @@
+# AlgoritmosCuanticos
+# Algoritmo QAOA (Quantum Approximate Optimization Algorithm)
+
+Los problemas de optimización combinatoria suelen crecer exponencialmente y requieren un enorme poder de cómputo para ser resueltos de forma exacta en computadores clásicos. La computación cuántica propone una alternativa mediante el QAOA, un algoritmo variacional que combina circuitos cuánticos parametrizados con optimización clásica para aproximar soluciones de alta calidad. Su fortaleza proviene de aprovechar la superposición y la interferencia cuántica para explorar el espacio de soluciones de manera más eficiente que los métodos puramente clásicos.
+
+# Circuito general del algoritmo QAOA
+
+El circuito QAOA comienza representando el problema de optimización como un Hamiltoniano de costo, cuya energía baja corresponde a soluciones deseadas. Los qubits se inicializan en una superposición uniforme mediante puertas Hadamard. Luego, el circuito aplica repetidamente dos operaciones parametrizadas: la evolución según el Hamiltoniano de costo, que incorpora la estructura del problema, y la evolución según un Hamiltoniano mezclador, que permite explorar el espacio de soluciones. Cada capa utiliza parámetros ajustables que determinan la duración de estas evoluciones. Tras varias capas, se mide el estado y se envía el resultado a un optimizador clásico, que ajusta los parámetros para mejorar la calidad de la solución. Este ciclo cuántico–clásico se repite hasta converger, obteniendo un resultado que aproxima la solución óptima del problema.
